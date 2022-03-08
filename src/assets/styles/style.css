@@ -1,4 +1,69 @@
 body {
     height: 100vh;
-     background: #1B1C1B;
- }
+    background: #1B1C1B;
+    user-select: none;
+    user-zoom: none;
+    position: relative;
+}
+
+.searchBar {
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.searchBar img{
+    height: 232px;
+}
+
+.searchInput {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.searchInput input {
+    height: 46px;
+    background: #343334;
+    width: 94%;
+    padding: 15px;
+    outline: none;
+    border-radius: 6px 0px 0px 6px;
+    -webkit-border-radius: 6px 0px 0px 6px;
+    -moz-border-radius: 6px 0px 0px 6px;
+    -ms-border-radius: 6px 0px 0px 6px;
+    -o-border-radius: 6px 0px 0px 6px;
+    color: #EEEEEE;
+    font-size: 16px;
+}
+
+.searchInput a {
+    height: 46px;
+    cursor: pointer;
+    padding: 6px;
+    background: #343334;
+    border-radius: 0px 6px 6px 0px;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    margin-left: -2px;
+}
+
+.searchInput a:hover {
+    background: #444444;
+}
+
+.searchInput a img {
+    height: 32px;
+    width: 32px;
+    padding: 4px 2px 4px 2px;
+}
