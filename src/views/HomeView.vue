@@ -1,9 +1,9 @@
 <template>
    <div class="searchBar">
        <img src="@/assets/images/main-logo.png" alt="logo">
-      <div class="searchInput">
+      <div class="searchInput flex items-center justify-between">
         <input type="text">
-        <button><img src="@/assets/images/search-icon.png" alt=""></button>
+        <button><img class="h-8" src="@/assets/images/search-icon.png" alt=""></button>
       </div>
    </div>
 </template>
