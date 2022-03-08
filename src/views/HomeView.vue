@@ -1,5 +1,7 @@
 <template>
-   <h1>Hello this is Main page!</h1>
+   <div class="searchBar">
+    <!--  -->
+   </div>
 </template>
 
 <script>
