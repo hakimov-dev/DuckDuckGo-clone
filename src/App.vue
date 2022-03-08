@@ -2,5 +2,8 @@
   <router-view />
 </template>
 
-<style>
+<style scoped>
+ *{
+   background: #1B1C1B;
+ }
 </style>
