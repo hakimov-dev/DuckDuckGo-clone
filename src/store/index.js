@@ -4,17 +4,17 @@ import router from '@/router'
 export default createStore({
   state: {
     searchValue: '',
-    searchResult: null,
+    searchResult: null
   },
   getters: {
   },
   mutations: {
   },
   actions: {
-    postSearchValue(ctx, value){
-      if(value.length > 0){
-        router.push({name: 'search', params:{value: value}})
-      } else{
+    postSearchValue (ctx, value) {
+      if (value.length > 0) {
+        router.push({ name: 'search', params: { value: value } })
+      } else {
         alert('Enter something to search!')
       }
     }
