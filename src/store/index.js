@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import router from '@/router'
 
 export default createStore({
   state: {
@@ -12,7 +13,7 @@ export default createStore({
   actions: {
     postSearchValue(ctx, value){
       if(value.length > 0){
-        this.$route.push(`/search/?q=:${value}`)
+        router.push(`/search/?q=:${value}`)
       } else{
         alert('Enter something to search!')
       }
