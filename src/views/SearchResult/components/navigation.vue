@@ -1,8 +1,51 @@
 <template>
-    <div class="navbar h-[110px] px-[10%] flex items-center justify-between bg-[#161616]">
-    <img class="w-[120px]" src="@/assets/images/search-logo.png" alt="" srcset="">
-    <input class="bg-[]" v-model="$store.state.searchValue" @keyup.enter="$store.dispatch('postSearchValue', $store.state.searchValue)" type="text" />
+  <div
+    class="navbar h-[80px] px-[5%] flex items-center justify-center bg-[#161616]"
+  >
+    <div class="w-full content flex items-center">
+      <div class="left-content w-[100%] flex items-center !justify-start">
+        <img
+          class="w-[80px] cursor-pointer"
+          src="@/assets/images/search-logo.png"
+          alt=""
+          srcset=""
+        />
+        <div class="searchInput !w-[50%] flex items-center justify-between shadow-lg !-ml-[0%]">
+          <input
+            v-model="$store.state.searchValue"
+            @keyup.enter="
+              $store.dispatch('postSearchValue', $store.state.searchValue)
+            "
+            type="text"
+          />
+          <a
+            @click.prevent="
+              $store.dispatch('postSearchValue', $store.state.searchValue)
+            "
+            ><img
+              class="!h-8 mt-[1%] hover:bg-[#161616]"
+              src="@/assets/images/search-icon.png"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="author">
+        <svg
+          class="cursor-pointer h-8 w-8 text-gray-500"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
