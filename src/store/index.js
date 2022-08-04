@@ -12,7 +12,7 @@ export default createStore({
   actions: {
     postSearchValue(ctx, value){
       if(value.length > 0){
-        this.$router.push(`/search/?q=:${value}`)
+        this.$route.push(`/search/?q=:${value}`)
       } else{
         alert('Enter something to search!')
       }
