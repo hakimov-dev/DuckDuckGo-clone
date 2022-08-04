@@ -72,3 +72,13 @@ img{
     pointer-events: none;
     user-select: none;
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
