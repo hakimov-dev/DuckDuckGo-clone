@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home'
+import searchResult from '@/views/SearchResult'
 
 const routes = [
   {
@@ -10,7 +11,7 @@ const routes = [
   {
     path: '/saerch/:query',
     name: 'search',
-    component: 'home'
+    component: searchResult
   }
 ]
 
