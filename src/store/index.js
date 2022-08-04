@@ -13,7 +13,7 @@ export default createStore({
   actions: {
     postSearchValue(ctx, value){
       if(value.length > 0){
-        router.push(`/search/?q=:${value}`)
+        router.push({name: 'search', params:{value: value}})
       } else{
         alert('Enter something to search!')
       }
