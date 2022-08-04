@@ -4,7 +4,8 @@ import router from '@/router'
 export default createStore({
   state: {
     searchValue: '',
-    searchResult: null
+    searchResult: null,
+    sidenavOpen: false,
   },
   getters: {
   },
