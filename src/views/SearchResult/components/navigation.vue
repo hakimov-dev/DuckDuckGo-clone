@@ -31,7 +31,7 @@
       </div>
       <div class="author">
         <svg
-          class="cursor-pointer h-8 w-8 text-gray-500"
+          class="cursor-pointer h-9 w-9 text-gray-500 rounded p-1 transition-all hover:bg-[#262626]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
