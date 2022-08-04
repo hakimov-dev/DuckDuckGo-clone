@@ -13,6 +13,7 @@ export default {
   name: 'HomeView',
  
   mounted() {
+  this.$store.state.searchValue = ''
   },
 }
 </script>
