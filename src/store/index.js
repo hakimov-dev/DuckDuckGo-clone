@@ -10,6 +10,9 @@ export default createStore({
   mutations: {
   },
   actions: {
+    postSearchValue(ctx, value){
+      
+    }
   },
   modules: {
   }
