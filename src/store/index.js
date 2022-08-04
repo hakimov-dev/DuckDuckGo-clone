@@ -2,7 +2,8 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    searchValue: ''
+    searchValue: '',
+    searchResult: null,
   },
   getters: {
   },
