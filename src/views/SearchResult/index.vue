@@ -1,7 +1,7 @@
 <template>
      <Navigation />
      <Sidenav />
-    <div class="results">
+    <div class="results" @click="$store.state.sidenavOpen = false">
         <h1>Results component</h1>
     </div>
 </template>

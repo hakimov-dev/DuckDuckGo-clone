@@ -1,5 +1,6 @@
 <template>
   <div
+    @click="$store.state.sidenavOpen = false"
     class="navbar h-[80px] px-[5%] flex items-center justify-center bg-[#161616]"
   >
     <div class="w-full content flex items-center">
@@ -31,6 +32,7 @@
       </div>
       <div class="author">
         <svg
+          @click.stop
           @click="$store.state.sidenavOpen = true"
           class="cursor-pointer h-9 w-9 text-gray-500 rounded p-1 transition-all hover:bg-[#262626]"
           viewBox="0 0 24 24"
