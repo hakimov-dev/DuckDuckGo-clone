@@ -31,6 +31,7 @@
       </div>
       <div class="author">
         <svg
+          @click="$store.state.sidenavOpen = true"
           class="cursor-pointer h-9 w-9 text-gray-500 rounded p-1 transition-all hover:bg-[#262626]"
           viewBox="0 0 24 24"
           fill="none"
