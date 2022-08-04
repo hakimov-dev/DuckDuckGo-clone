@@ -9,8 +9,11 @@
 </template>
 
 <script>
-
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+ 
+  mounted() {
+  this.$store.state.searchValue = ''
+  },
 }
 </script>
