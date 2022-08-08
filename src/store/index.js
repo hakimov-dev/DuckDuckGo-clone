@@ -11,6 +11,9 @@ export default createStore({
   getters: {
   },
   mutations: {
+    setResult(state, result){
+
+    }
   },
   actions: {
     postSearchValue (ctx, value) {
