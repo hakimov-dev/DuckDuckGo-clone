@@ -17,6 +17,11 @@ export default createStore({
       if (value.length > 0) {
         if(navigator.onLine){
           router.push({ name: 'search', params: { value: value } })
+          axios.post(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${value}`).then(res =>{
+            console.log(res)
+          }).catch(error => {
+            console.log(error)
+          })
         }else
           alert('You are offline, turn on internet and try it')
       } else {
