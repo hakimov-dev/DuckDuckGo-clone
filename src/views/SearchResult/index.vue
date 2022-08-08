@@ -8,6 +8,7 @@
     >
       <div
         class="card group w-[55%] md:mr-[30%] cursor-pointer xl:mr-[33%] max-h-[180px] p-[20px] overflow-hidden shadow-xl bg-[#282828] rounded-xl"
+        v-for="item in $store.state.searchResult"
       >
         <div class="head-links flex items-center">
           <img
