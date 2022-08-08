@@ -81,9 +81,12 @@
 /* eslint-disable */
 import Navigation from './components/NaviGation.vue'
 import Sidenav from './components/Sidenav.vue'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useStore } from 'vuex';
 
-const router = useRouter()
+const route = useRoute()
 const store = useStore()
+
+if(store.state.searchValue == '') store.state.searchValue = route.params.value 
+if(store.state.searchResult == null) store.dispatch('postSearchValue', route.params.value)
 </script>
