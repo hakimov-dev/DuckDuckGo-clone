@@ -44,7 +44,9 @@
       v-else
     >
       <div
-        class="card !select-none  group w-[55%] md:mr-[30%] cursor-pointer xl:mr-[33%] max-h-[180px] p-[20px] overflow-hidden shadow-xl bg-[#282828] rounded-xl"
+        v-for="item in 6"
+        :key="item"
+        class="card my-2 !select-none  group w-[55%] md:mr-[30%] cursor-progress xl:mr-[33%] max-h-[180px] p-[20px] overflow-hidden shadow-xl bg-[#282828] rounded-xl"
       >
         <div class="head-links flex items-center">
           <div
