@@ -44,25 +44,23 @@
       v-else
     >
       <div
-        class="card group w-[55%] md:mr-[30%] cursor-pointer xl:mr-[33%] max-h-[180px] p-[20px] overflow-hidden shadow-xl bg-[#282828] rounded-xl"
+        class="card !select-none  group w-[55%] md:mr-[30%] cursor-pointer xl:mr-[33%] max-h-[180px] p-[20px] overflow-hidden shadow-xl bg-[#282828] rounded-xl"
       >
         <div class="head-links flex items-center">
-          <img
-            class="rounded-full h-[25px] w-[25px]"
-            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTwyK2husUlO6TF4bsP2Jo-sW0i3BQW1u_AnpkybZpNAWJQntyQ6bfdGek"
-            alt=""
+          <div
+            class="rounded-full h-[25px] w-[25px] bg-gray-300 animate-pulse"
           />
-          <h1 class="text-[16px] text-white opacity-90 ml-[15px]">
-            Loading...
+          <h1 class="text-[16px] text-gray-300 rounded-[3px] ml-[15px] bg-gray-300 animate-pulse">
+            Loading... plaece wait 
           </h1>
         </div>
         <h1
-          class="title text-2xl font-medium text-white opacity-90 ml-[15px] group-hover:underline mt-[5px] -ml-[1px]"
+          class="title w-[80%] text-2xl text-gray-300 rounded-[3px] bg-gray-300 animate-pulse font-medium ml-[15px] group-hover:underline mt-[5px] -ml-[1px]"
         >
           Your request loading pleace wait...
         </h1>
         <p
-          class="about-text text-white opacity-80 mt-[10px] max-h-[78px] overflow-hidden"
+          class="about-text  text-2xl text-gray-300 rounded-[3px] bg-gray-300 animate-pulse mt-[10px] max-h-[78px] overflow-hidden"
         >
           Latest information on Coronavirus Disease 2019 (COVID-19) from the
           County of Hawaii Civil Defense Agency:
