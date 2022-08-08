@@ -1,9 +1,9 @@
 <template>
   <Navigation />
   <Sidenav />
-  <div class="results px-[6%]">
+  <div class="results px-[6%] flex items-start mt-[4%] justify-between">
     <div
-      class="cards flex items-center flex-col mt-[4%] w-[60%]"
+      class="cards flex items-center flex-col w-[60%]"
       v-if="$store.state.searchResult"
     >
       <a
@@ -77,6 +77,9 @@
         </p>
       </div>
     </div>
+
+    <!-- Random image -->
+    <img class="rounded-xl mt-[1%] transition-all" :src="`https://picsum.photos/445/820?${$route.params.value}`" alt="">
   </div>
 </template>
 
