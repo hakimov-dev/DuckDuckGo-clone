@@ -1,7 +1,7 @@
 <template>
   <div
     @click="$store.state.sidenavOpen = false"
-    class="navbar h-[80px] px-[5%] flex items-center justify-center bg-[#161616]"
+    class="navbar h-[80px] px-[5%] flex items-center justify-center bg-[#161616] sticky top-0 z-[111]"
   >
     <div class="w-full content flex items-center">
       <div class="left-content w-[100%] flex items-center !justify-start">
