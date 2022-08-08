@@ -12,7 +12,7 @@ export default createStore({
   },
   mutations: {
     setResult(state, result){
-
+     state.searchResult  = result
     }
   },
   actions: {
