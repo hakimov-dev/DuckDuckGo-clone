@@ -20,6 +20,12 @@
 
 <script>
 export default {
-    name: 'sidenav-item'
+    name: 'sidenav-item',
+
+    methods: {
+     history(){
+        aler('This page is progressing')
+     }   
+    }
 }
 </script>
