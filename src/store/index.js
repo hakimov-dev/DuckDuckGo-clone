@@ -17,7 +17,7 @@ export default createStore({
       if (value.length > 0) {
         if(navigator.onLine){
           router.push({ name: 'search', params: { value: value } })
-          axios.post(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${value}`).then(res =>{
+          axios.post(`https://www.googleapis.com/customsearch/v1?key=${process.env.VUE_APP_API_KEY}&cx=${process.env.VUE_APP_CONTEXT_KEY}&q=${value}`).then(res =>{
             console.log(res)
           }).catch(error => {
             console.log(error)
