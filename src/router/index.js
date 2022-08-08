@@ -12,6 +12,11 @@ const routes = [
     path: '/search/?q=:value',
     name: 'search',
     component: searchResult
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    redirect: '/'
   }
 ]
 
