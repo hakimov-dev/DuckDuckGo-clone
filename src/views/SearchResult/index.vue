@@ -81,12 +81,14 @@
     <!-- Random image -->
     <img class="rounded-xl mt-[1%] transition-all" :src="`https://picsum.photos/445/820?${$route.params.value}`" alt="">
   </div>
+  <Footer />
 </template>
 
 <script setup>
 /* eslint-disable */
 import Navigation from './components/NaviGation.vue'
 import Sidenav from './components/Sidenav.vue'
+import Footer from './components/Footer.vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex';
 
