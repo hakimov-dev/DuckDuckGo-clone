@@ -14,7 +14,10 @@ export default createStore({
   actions: {
     postSearchValue (ctx, value) {
       if (value.length > 0) {
-        router.push({ name: 'search', params: { value: value } })
+        if(navigator.onLine){
+          router.push({ name: 'search', params: { value: value } })
+        }else
+          aler('You ar offline, turn on internet and try it')
       } else {
         alert('Enter something to search!')
       }
