@@ -82,6 +82,7 @@
 import Navigation from './components/NaviGation.vue'
 import Sidenav from './components/Sidenav.vue'
 import { useRouter } from 'vue-router'
+import { useStore } from 'vuex';
 
 const router = useRouter()
 </script>
