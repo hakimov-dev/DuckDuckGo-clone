@@ -22,7 +22,7 @@ export default createStore({
           router.push({ name: 'search', params: { value: value } })
           axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.VUE_APP_API_KEY}&cx=${process.env.VUE_APP_CONTEXT_KEY}&q=${value}`).then(res =>{
             console.log(res.data)
-            // ctx.commit('setResult', res.data.items)
+            ctx.commit('setResult', res.data.items)
           }).catch(error => {
             console.log(error)
           })

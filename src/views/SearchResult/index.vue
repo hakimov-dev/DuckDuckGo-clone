@@ -13,12 +13,6 @@
         v-for="item in $store.state.searchResult"
       >
         <div class="head-links flex items-center">
-          <!-- <img
-            v-if="item.pagemap.cse_thumbnail[0] !== undefined"
-            class="rounded-full h-[25px] w-[25px]"
-            :src="item.pagemap.cse_thumbnail[0].src"
-            alt=""
-           /> -->
           <img
             class="rounded-full h-[18px] w-[18px]"
             :src="`http://www.google.com/s2/favicons?domain=${item.link}`"
