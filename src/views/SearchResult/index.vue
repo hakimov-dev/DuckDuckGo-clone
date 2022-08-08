@@ -43,7 +43,7 @@
 
   <!-- For loading -->
     <div
-      class="cards flex items-center flex-col mt-[4%]"
+      class="cards flex items-center flex-col w-[60%]"
       v-else
     >
       <div
