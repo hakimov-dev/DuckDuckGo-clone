@@ -10,5 +10,5 @@
 /* eslint-disable */
 import Navigation from './components/NaviGation.vue'
 import Sidenav from './components/Sidenav.vue';
-
+import Loader from '@/components/Loader.vue'
 </script>
