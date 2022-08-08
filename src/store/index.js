@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import router from '@/router'
+import axios from 'axios'
 
 export default createStore({
   state: {
@@ -17,7 +18,7 @@ export default createStore({
         if(navigator.onLine){
           router.push({ name: 'search', params: { value: value } })
         }else
-          aler('You ar offline, turn on internet and try it')
+          alert('You are offline, turn on internet and try it')
       } else {
         alert('Enter something to search!')
       }
