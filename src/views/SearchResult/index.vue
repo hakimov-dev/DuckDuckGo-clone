@@ -79,7 +79,7 @@
     </div>
 
     <!-- Random image -->
-    <img class="rounded-xl mt-[1%] transition-all" :src="`https://picsum.photos/445/820?${$route.params.value}`" alt="">
+    <img v-if="$store.state.searchResult" class="rounded-xl mt-[1%] transition-all" :src="`https://picsum.photos/445/820?${$route.params.value}`" alt="">
   </div>
   <Footer />
 </template>
