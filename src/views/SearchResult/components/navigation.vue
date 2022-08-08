@@ -5,12 +5,14 @@
   >
     <div class="w-full content flex items-center">
       <div class="left-content w-[100%] flex items-center !justify-start">
+        <router-link to="/">
         <img
           class="w-[80px] cursor-pointer"
           src="@/assets/images/search-logo.png"
           alt=""
           srcset=""
         />
+        </router-link>
         <div class="searchInput !w-[50%] flex items-center justify-between shadow-lg !-ml-[0%]">
           <input
             v-model="$store.state.searchValue"
