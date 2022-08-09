@@ -5,10 +5,10 @@
           <div class="flex justify-between pb-2 -mt-2">
            <button class="bg-red-600 py-[6px] px-[18px] rounded-2xl font-medium text-[#e4e4e4] hover:opacity-80 transition-all">Clear all</button>
           </div>
-           <div v-for="item in 30" class="card w-[80%] h-[40px] flex items-center w-full justify-between p-[1%] px-[2%] my-2 text-white shadow shadow-gray-500 rounded-[3px]">
+           <div v-for="item in $store.state.userSearchHistory" class="card w-[80%] min-h-[40px] !overlow-y-scroll overflow-x-hidden  h-auto !max-h-[80px] flex items-center w-full justify-between p-[1%] px-[2%] my-2 text-white shadow shadow-gray-500 rounded-[3px]">
              <img class="h-[20px] w-[20px]" src="../assets/images/icon.png" alt="">
-             <h1>Search item</h1>
-             <p>Search time</p>
+             <h1 class="w-[20%] mx-auto text-[16px]">{{item.searchValue}}</h1>
+             <p class="opacity-90 text-[14px]">{{item.date}}</p>
            </div>
         </div>
     </div>
@@ -19,6 +19,10 @@
 <style>
 .modal-content::-webkit-scrollbar {
   width: 10px;
+}
+
+.card::-webkit-scrollbar{
+  width: 0px;
 }
 
 .modal-content::-webkit-scrollbar-track {
