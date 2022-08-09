@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import router from '@/router'
 import axios from 'axios'
+import cookies from 'vue-cookies'
 
 export default createStore({
   state: {
