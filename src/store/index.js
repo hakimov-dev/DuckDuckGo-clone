@@ -20,6 +20,10 @@ export default createStore({
 
     setHistory(state, value){
       state.userSearchHistory = value
+    },
+
+    updateHistory(state, value){
+
     }
   },
   actions: {
