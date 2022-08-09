@@ -47,9 +47,9 @@ export default createStore({
              ctx.commit('updateHistory', value)
             }
 
-          router.push({ name: 'search', params: { value: value } })
           axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.VUE_APP_API_KEY}&cx=${process.env.VUE_APP_CONTEXT_KEY}&q=${value}`).then(res =>{
-          ctx.commit('setResult', res.data.items)
+              ctx.commit('setResult', res.data.items)
+              router.push({ name: 'search', params: { value: value } })
           }).catch(error => {
             if(error.response.status == 429 || error.response.status == 429)
               alert('Pleace try again later we have too many request...')
