@@ -10,9 +10,6 @@
     </div>
 </template>
 
-<script setup>
-  const modalOpen = false
-</script>
 
 <style>
 .modal-content::-webkit-scrollbar {
