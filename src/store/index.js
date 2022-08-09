@@ -55,6 +55,10 @@ export default createStore({
       } else {
         alert('Enter something to search!')
       }
+    },
+
+    clearSearchHistory(){
+      cookies.remove('user_search_history')
     }
   },
   modules: {
