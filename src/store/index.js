@@ -24,7 +24,6 @@ export default createStore({
           ctx.commit('setResult', res.data.items)
           router.push({ name: 'search', params: { value: value } })
           }).catch(error => {
-            console.log(error.response.status)
             if(error.response.status == 429 || error.response.status == 429)
               alert('Pleace try again later we have too many request...')
              else
