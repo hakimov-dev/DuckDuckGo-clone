@@ -7,6 +7,7 @@ export default createStore({
     searchValue: '',
     searchResult: null,
     sidenavOpen: false,
+    modalOpen: false,
   },
   getters: {
   },
