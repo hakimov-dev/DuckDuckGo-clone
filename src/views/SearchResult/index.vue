@@ -1,6 +1,7 @@
 <template>
   <Navigation />
   <Sidenav />
+  <Modal/>
   <div class="results px-[6%] flex items-start mt-[4%] justify-between">
     <div
       class="cards flex items-center flex-col w-[60%]"
@@ -85,6 +86,7 @@ import Sidenav from './components/Sidenav.vue'
 import Footer from './components/Footer.vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex';
+import Modal from '@/components/Modal.vue';
 
 const route = useRoute()
 const store = useStore()
