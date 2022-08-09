@@ -30,7 +30,8 @@ export default createStore({
     },
 
     clearVariables(state){
-      
+      state.userSearchHistory = []
+      state.modalOpen = false
     }
   },
   actions: {
