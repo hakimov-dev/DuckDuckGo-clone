@@ -9,18 +9,29 @@ export default createStore({
     searchResult: null,
     sidenavOpen: false,
     modalOpen: false,
+    userSearchHistory: null
   },
   getters: {
   },
   mutations: {
     setResult(state, result){
      state.searchResult  = result
+    },
+
+    setHistory(state, value){
+      state.userSearchHistory = value
     }
   },
   actions: {
     postSearchValue (ctx, value) {
       if (value.length > 0) {
         if(navigator.onLine){
+          if(cookies.get('user_search_history') == undefined){
+             cookies.set('user_search_history', []) 
+             ctx.commit('setHistory', cookies.get('user_search_history'))}
+           else
+             ctx.commit('setHistory', cookies.get('user_search_history'))
+          
           router.push({ name: 'search', params: { value: value } })
           axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.VUE_APP_API_KEY}&cx=${process.env.VUE_APP_CONTEXT_KEY}&q=${value}`).then(res =>{
           ctx.commit('setResult', res.data.items)
