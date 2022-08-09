@@ -24,7 +24,7 @@ export default {
 
     methods: {
      history(){
-        aler('This page is progressing')
+        alert('This page is progressing')
      }   
     }
 }
