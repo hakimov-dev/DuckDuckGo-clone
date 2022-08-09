@@ -24,7 +24,7 @@ export default {
 
     methods: {
      history(){
-        alert('This page is progressing')
+        this.$store.state.modalOpen = true
      }   
     }
 }
