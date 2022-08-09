@@ -57,7 +57,7 @@ export default createStore({
       }
     },
 
-    clearSearchHistory(){
+    clearSearchHistory(ctx){
       cookies.remove('user_search_history')
     }
   },
