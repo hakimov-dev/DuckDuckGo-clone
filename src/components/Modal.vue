@@ -15,7 +15,7 @@
         <div v-else @click.stop class="modal-content !overflow-y-scroll overflow-x-hidden  h-[400px] flex flex-col item-center w-[50%] bg-[#1c1c1c] rounded-xl absolute top-[25%] left-[25%] p-[2%]">
           <img class="w-[60%] mx-auto my-3" src="../assets/images/404.png" alt="" />
            <div class="card w-[80%] min-h-[40px] !overlow-y-scroll overflow-x-hidden  h-auto !max-h-[80px] flex items-center w-full justify-between p-[1%] px-[2%] my-2 text-white shadow shadow-gray-500 rounded-[3px]">
-             <h1>Yout history was empty...</h1>
+             <h1>Your history is empty...</h1>
            </div>
         </div>
     </div>
