@@ -59,6 +59,7 @@ export default createStore({
 
     clearSearchHistory(ctx){
       cookies.remove('user_search_history')
+      ctx.commit('clearVariables')
     }
   },
   modules: {
