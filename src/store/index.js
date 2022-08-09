@@ -9,7 +9,7 @@ export default createStore({
     searchResult: null,
     sidenavOpen: false,
     modalOpen: false,
-    userSearchHistory: null
+    userSearchHistory: []
   },
   getters: {
   },
@@ -25,14 +25,16 @@ export default createStore({
   actions: {
     postSearchValue (ctx, value) {
       if (value.length > 0) {
+        const date = new Date();
         if(navigator.onLine){
           if(cookies.get('user_search_history') == undefined){
-             cookies.set('user_search_history', []) 
-             ctx.commit('setHistory', cookies.get('user_search_history'))}
+             cookies.set('user_search_history', JSON.stringify([{searchValue: value, date: `${date.getFullYear()}/${(date.getMonth() > 9 ? date.getMonth() +1 : `0${date.getMonth() +1}`)}/${(date.getDate() > 9 ? date.getDate() : `0${date.getDate()}`)} ${(date.getHours() > 9 ? date.getHours() : '0'+ date.getHours())}:${(date.getMinutes() > 9 ? date.getMinutes() : '0'+ date.getMinutes())}`}]))
+             ctx.commit('setHistory', JSON.parse(cookies.get('user_search_history')))}
            else
-             ctx.commit('setHistory', cookies.get('user_search_history'))
+             ctx.commit('setHistory', JSON.parse(cookies.get('user_search_history')))
           
           router.push({ name: 'search', params: { value: value } })
+          ctx.commit('updateHistory', value)
           axios.get(`https://www.googleapis.com/customsearch/v1?key=${process.env.VUE_APP_API_KEY}&cx=${process.env.VUE_APP_CONTEXT_KEY}&q=${value}`).then(res =>{
           ctx.commit('setResult', res.data.items)
           }).catch(error => {
