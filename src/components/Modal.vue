@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-
+  const modalOpen = false
 </script>
