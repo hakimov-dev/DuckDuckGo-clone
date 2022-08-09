@@ -27,7 +27,8 @@ export default createStore({
             console.log(error.response.status)
             if(error.response.status == 429 || error.response.status == 429)
               alert('Pleace try again later we have too many request...')
-            
+             else
+               alert(error.message)
           })
         }else
           alert('You are offline, turn on internet and try it')
