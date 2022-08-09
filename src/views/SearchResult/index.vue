@@ -92,5 +92,4 @@ const route = useRoute()
 const store = useStore()
 
 if(store.state.searchValue == '') store.state.searchValue = route.params.value 
-if(store.state.searchResult == null) store.dispatch('postSearchValue', route.params.value)
 </script>
